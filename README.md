@@ -4,6 +4,7 @@ Download the **ASPCM** dataset from the following sources:
 - **Google Drive**: [下载链接](https://drive.google.com/your_link_here)
 - **Baidu Disk**: [下载链接](https://pan.baidu.com/your_link_here) (提取码: `a410`)
 
+the organized directory should look like:
 ```
 dataset_root/
 ├── images/     # All image files

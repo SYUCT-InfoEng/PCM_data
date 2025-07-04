@@ -7,3 +7,9 @@ Download the ASPCM dataset from the following sources:
   - test
   - train
   - val
+Download the ASPCM dataset from the following sources:
+
+- AntiUAV410/
+  - test
+  - train
+  - val

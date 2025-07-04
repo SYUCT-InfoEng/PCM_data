@@ -3,8 +3,7 @@
 Download the **ASPCM** dataset from the following sources:
 Download the ASPCM dataset from the following sources:
 ```
-- AntiUAV410/
-  - test
-  - train
-  - val
+dataset_root/
+├── images/     # All image files
+└── labels/    # Corresponding label files
 ```

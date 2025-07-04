@@ -1,8 +1,8 @@
 # Activated Sludge Phase-Contrast Microscopy Dataset
 ## For Filamentous Bacteria & Floc Segmentation​​
 Download the **ASPCM** dataset from the following sources:
-- **Google Drive**: [下载链接](https://drive.google.com/your_link_here)
-- **Baidu Disk**: [下载链接](https://pan.baidu.com/your_link_here) (提取码: `a410`)
+- **Google Drive**: [Download](https://drive.google.com/your_link_here)
+- **Baidu Disk**: [Download](https://pan.baidu.com/your_link_here) ((Access code: `a410`)
 
 the organized directory should look like:
 ```

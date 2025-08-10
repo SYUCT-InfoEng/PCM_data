@@ -3,6 +3,7 @@ This dataset is mainly used for semantic segmentation of filamentous bacteria fr
 The dataset contains a total of 505 images with their corresponding labels.
 
 Download the **ASPCM** dataset from the following sources:
+- **Google Drive**: [Download](https://drive.google.com/file/d/1aVisNRnDtea0rVZWGiYu-fzBAMdj7MdI/view?usp=drive_link)
 - **Baidu Disk**: [Download](https://pan.baidu.com/s/1ZPg9YJ2Si0hxukYjJlNq5Q) ((Access code: `iuq6`)
 
 The directory should look like:

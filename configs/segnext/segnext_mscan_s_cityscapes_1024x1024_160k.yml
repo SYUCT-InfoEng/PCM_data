@@ -1,0 +1,38 @@
+_base_: '../_base_/mydataset.yml'
+
+batch_size: 2
+iters: 50000
+
+optimizer:
+  _inherited_: False
+  type: AdamW
+  weight_decay: 0.01
+  custom_cfg:
+    - name: head
+      lr_mult: 10.0
+    - name: norm
+      weight_decay_mult: 0.0
+
+loss:
+  types:
+    - type: LovaszSoftmaxLoss
+  coef: [1]
+
+lr_scheduler:
+  type: PolynomialDecay
+  learning_rate: 0.0001
+  power: 2.0
+
+model:
+  type: SegNeXt
+  backbone:
+    type: MSCAN_S
+    pretrained: https://paddleseg.bj.bcebos.com/dygraph/backbone/mscan_s_imagenet_pretrained.zip
+  num_classes: 3
+  decoder_cfg:
+    channels: 256
+    ham_channels: 256
+    ham_kwargs:
+      MD_R: 16
+    dropout_rate: 0.1
+    align_corners: False

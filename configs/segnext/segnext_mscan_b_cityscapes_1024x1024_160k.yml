@@ -1,0 +1,41 @@
+_base_: '../_base_/mydataset.yml'
+
+batch_size: 2 
+iters: 40000
+
+
+optimizer:
+  _inherited_: False
+  type: AdamW
+  beta1: 0.9
+  beta2: 0.999
+  weight_decay: 0.01
+
+loss:
+  types:
+    - type: CrossEntropyLoss
+  coef: [1]
+
+lr_scheduler:
+  type: PolynomialDecay
+  learning_rate: 0.0001
+  end_lr: 0.0
+  power: 2.0
+
+model:
+  type: SegNeXt2
+  backbone:
+    type: MSCAN_B
+    pretrained: https://paddleseg.bj.bcebos.com/dygraph/backbone/mscan_b_imagenet_pretrained.zip
+  num_classes: 3
+  decoder_cfg:
+    channels: 256
+    ham_channels: 256
+    ham_kwargs:
+      MD_R: 16
+    dropout_rate: 0.1
+    align_corners: False
+test_config:
+    is_slide: True
+    crop_size: [1024, 1024]
+    stride: [768, 768]

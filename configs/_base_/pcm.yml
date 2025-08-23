@@ -1,0 +1,50 @@
+batch_size: 8
+iters: 50000
+
+train_dataset:
+  type: PCM
+  dataset_root: /home/aistudio/data/n_pcm
+  transforms:
+    - type: ResizeStepScaling
+      min_scale_factor: 0.5
+      max_scale_factor: 2.0
+      scale_step_size: 0.25
+    - type: RandomRotation
+    - type: RandomPaddingCrop
+      crop_size: [1300, 1300]  # 修改图像大小
+    - type: RandomHorizontalFlip
+    - type: RandomDistort
+      brightness_range: 0.4
+      contrast_range: 0.4
+      saturation_range: 0.4
+    - type: Normalize
+  mode: train
+
+
+val_dataset:
+  type: PCM
+  dataset_root: /home/aistudio/data/n_pcm
+  transforms:
+    - type: Normalize
+  mode: val
+
+
+optimizer:
+  type: sgd
+  momentum: 0.9
+  weight_decay: 4.0e-5
+
+lr_scheduler:
+  type: PolynomialDecay
+  learning_rate: 0.03
+  end_lr: 0.0001
+  power: 0.9
+
+loss:
+  types:
+    - type: MixedLoss
+      losses:
+        - type: CrossEntropyLoss
+        - type: LovaszSoftmaxLoss
+      coef: [0.3, 1.6]
+  coef: [1]

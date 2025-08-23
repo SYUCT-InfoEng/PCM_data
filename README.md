@@ -1,4 +1,4 @@
-![](figures/fig2.png)
+![](figures/fig2.jpg)
 
 **Toward segmentation of filaments and flocs to monitor wasterwater treatment via a transformer with multi-scale feature aggregation**
 
@@ -47,7 +47,7 @@ python tools/train.py \
 This dataset is mainly used for semantic segmentation of filamentous bacteria from flocs in phase contrast microscopy images of activated sludge. 
 The dataset contains a total of 505 images with their corresponding labels. 
 
-![](figures/fig1.png)
+![](figures/fig1.jpg)
 
 Download the ASPCM dataset from the following sources:
 - **Google Drive**: [Download](https://drive.google.com/file/d/1aVisNRnDtea0rVZWGiYu-fzBAMdj7MdI/view?usp=drive_link)
@@ -77,3 +77,6 @@ Please cite the following paper if the code and dataset help your project:
 ```
 ## Acknowledgements
 This repository incorporates methods from (https://github.com/cqylunlun), with its code framework derived from [PaddleSeg](https://github.com/PaddlePaddle/PaddleSeg).Thanks for the great inspiration from [SegFormer](https://github.com/NVlabs/SegFormer).
+
+
+

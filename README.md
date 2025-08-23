@@ -9,8 +9,8 @@
 * [🔧 Environments](#environments)
 * [🚀 Run Experiments](#run-experiments)
 * [📂 Dataset Release](#dataset-release)
-* [🙏 Acknowledgements](#acknowledgements)
 * [🔗 Citation](#citation)
+* [🙏 Acknowledgements](#acknowledgements)
 
 ## Introduction
 This repository contains source code for GLASS implemented with PyTorch.
